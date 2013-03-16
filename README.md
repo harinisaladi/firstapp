@@ -6,4 +6,4 @@ I hear this is pretty easy.
 
 Let's see if I can pick it up quickly!
 
-- Harini Saladi (www.harinisaladi.com)
+## Harini Saladi (www.harinisaladi.com)
