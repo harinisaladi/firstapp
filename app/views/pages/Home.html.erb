@@ -1,17 +1,24 @@
-<div class="hero-unit">
-	<h3>
-		My first rails app!
-	</h3>
-	
-		<p>
-		Setup wasn't so bad so far, <%= link_to "(checking)", "http://harinisaladi.com" %> but it took forever.
-		</p>
-		<p>
-			Hopefully I'm able to pick this up quickly. It's been a while since I've coded much :)
-		</p>
+<% if user_signed_in? %>
+	<div class="hero-unit">
+		<h1> Welcome! You are logged in! </h1>
+	</div>
+<% else %>
 
-		<p>
-			<a href="#" class="btn btn-primary">Sign up now!</a>
-		</p>
-</div>
-	
+	<div class="hero-unit">
+		<h3>
+			My first rails app!
+		</h3>
+		
+			<p>
+			Setup wasn't so bad so far, <%= link_to "(checking)", "http://harinisaladi.com" %> but it took forever.
+			</p>
+			<p>
+				Hopefully I'm able to pick this up quickly. It's been a while since I've coded much :)
+			</p>
+
+			<p>
+				<%= link_to "Sign up now!", new_user_registration_path, class: "btn btn-primary btn-large" %>
+				
+			</p>
+	</div>
+<% end %>	

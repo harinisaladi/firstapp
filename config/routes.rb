@@ -1,5 +1,7 @@
 Firstapp::Application.routes.draw do
 
+  devise_for :users
+
     get 'about' => 'pages#About'
     root :to => 'pages#Home'
 
