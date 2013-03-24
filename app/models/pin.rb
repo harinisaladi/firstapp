@@ -7,9 +7,9 @@ class Pin < ActiveRecord::Base
   								content_type: { content_type: ['image/jpeg', 'image/jpg', 'image/png', 'image/gif'] },
   								size: { less_than: 5.megabytes }
   belongs_to :user
-  has_attached_file :image, styles: {medium: "320x240>"}
-  attr_accessor :image_file_name
-  attr_accessor :image_content_type
-  attr_accessor :image_file_size
-  attr_accessor :image_updated_at
+  has_attached_file :image #, styles: {medium: "320x240>"}
+  # attr_accessor :image_file_name
+  # attr_accessor :image_content_type
+  # attr_accessor :image_file_size
+  # attr_accessor :image_updated_at
 end
