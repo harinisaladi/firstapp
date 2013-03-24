@@ -3,7 +3,7 @@ class PinsController < ApplicationController
   # GET /pins
   # GET /pins.json
   def index
-    @pins = Pin.all #creating a variable @pins and calling the method to see all pins
+    @pins = Pin.order("created_at desc") #creating a variable @pins and calling the method to see all pins
     #"@" creates a global variable
     respond_to do |format|
       format.html # index.html.erb
